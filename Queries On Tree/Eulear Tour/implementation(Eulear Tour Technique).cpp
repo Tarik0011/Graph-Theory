@@ -58,7 +58,7 @@ void solve(){
 		cout<<T[i]<<" ";
 	}
 	cout<<endl;
-	//Flattening 
+	//Flattening Tree
 	for(int i=1;i<=2*n;i++){
 		cout<<FT[i]<<" ";
 	}
