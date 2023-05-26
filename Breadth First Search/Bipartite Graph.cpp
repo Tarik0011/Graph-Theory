@@ -35,11 +35,11 @@ bool isBipartite(int source){
 				q.push(u);
 			}
 			else if(color[u]==color[node]){
-				return true;
+				return false;
 			}
 		}
 	}
-	return false;
+	return true;
 }
 void solve(){
 	int n,m;
