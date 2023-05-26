@@ -53,13 +53,13 @@ void solve(){
 	memset(color,-1,sizeof(color));
 	for(int i=1;i<=n;i++){
 		if(color[i]==-1){
-			if(isBipartite(i)==true){
-				cout<<"Bipartite"<<endl;
+			if(isBipartite(i)==false){
+				cout<<"Not Bipartite"<<endl;
 				return;
 			}
 		}
 	}
-	cout<<"Not Bipartite"<<endl;
+	cout<<"Bipartite"<<endl;
 	
 
 }
