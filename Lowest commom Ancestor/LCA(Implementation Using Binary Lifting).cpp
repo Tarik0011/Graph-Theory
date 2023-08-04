@@ -37,6 +37,16 @@ void dfs(int node,int par){
 		}
 	}
 }
+int getAncestor(int u,int d){
+	if(d==0)return u;
+	while(d){
+		int l=(int)log2(d);
+		d-=(1<<l);
+		u=parent[u][l];
+	}
+	if(u==0)return -1;
+	return u;
+}
 int LCA(int u,int v){
 	if(dis[u]<dis[v])swap(u,v);
 	for(int i=sz-1;i>=0;i--){
