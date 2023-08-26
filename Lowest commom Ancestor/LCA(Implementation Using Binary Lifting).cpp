@@ -26,7 +26,17 @@ vector<int>adj[mxn];
 int dis[mxn];
 int parent[mxn][sz];
 
-
+void clr(int n){
+	for(int i=0;i<=n;i++){
+		adj[i].clear();
+		dis[i]=0;
+	}
+	for(int i=0;i<=n;i++){
+		for(int j=0;j<=19;j++){
+			parent[i][j]=0;
+		}
+	}
+}
 void dfs(int node,int par){
 	for(int i=1;i<sz;i++)parent[node][i]=parent[parent[node][i-1]][i-1];
 	for(auto x:adj[node]){
