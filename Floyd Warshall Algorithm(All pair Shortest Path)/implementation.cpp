@@ -34,7 +34,11 @@ void solve() {
 	for(int i=1;i<=m;i++){
 		int u,v,w;
 		cin>>u>>v>>w;
-		dis[u][v]=w;
+		dis[u][v]=w;   //directed
+		
+		//bidirectional
+		//dis[u][v]=w;
+		//dis[v][u]=w;
 	}
 
 	for(int k=1;k<=n;k++){
